@@ -1,16 +1,16 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[x] <div> and <span>
+[x] border:, margin:, and padding: 
+[x] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
-[ no ] Feature 6 - Unique Border Styles
+[ yes ] Feature 6 - Unique Border Styles
 -->
 
 
@@ -20,13 +20,133 @@ Select TWO Additional Features to Add
 <head>
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
-  <style>
 
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: white;
+      border: 3px solid black;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;
+    }
+
+    h1 {
+      text-align: center;
+      border-bottom: 3px solid black;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      border: 2px solid gray;
+      padding: 15px;
+      margin: 20px 0;
+      background-color: white;
+    }
+
+    img {
+      display: block;
+      border: 2px solid black;
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+
+    .flip-card {
+      background-color: transparent;
+      width: 270px;
+      height: 330px;
+      perspective: 1000px;
+      margin-top: 10px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border: 2px solid black;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .flip-card-front {
+      background-color: white;
+    }
+
+    .flip-card-back {
+      background-color: lightgray;
+      transform: rotateY(180deg);
+    }
   </style>
+
 </head>
+
 <body>
 
- 
+  <div class="container">
+
+    <h1>Top 3 reasons me and my dog are the same person</h1>
+
+    <div class="mention-box">
+      <h3><span class="Mention">Honorable Mention</span></h3>
+      <p>We have the same favorite animal, <span class="panda">panda</span>.</p>
+      <img src="IMG_3465.jpeg" width="300">
+    </div>
+
+    <div class="section">
+      <h2>3. She is curious</h2>
+      <p>We are the 2 curious george's in the house.</p>
+      <img src="IMG_2219.jpeg" width="300">
+    </div>
+
+    <div class="section">
+      <h2>2. We both enjoy nature</h2>
+      <p>She is my #1 hiking buddy, we sometimes meditate on mountains together.</p>
+      <img src="IMG_4799.jpeg" width="300">
+    </div>
+
+    <div class="section">
+      <h2>AND #1 issssss</h2>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front">
+            <p>💤</p>
+          </div>
+
+          <div class="flip-card-back">
+            <h3>We both love sleeping</h3>
+            <p>Anytime we aren't conquering the world together, we’re sleeping.</p>
+            <img src="IMG_1156.jpeg" width="230">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
